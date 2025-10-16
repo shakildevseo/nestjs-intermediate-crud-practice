@@ -148,5 +148,18 @@ export class DevsService {
    }
 
 
+   //  Get single developer data by id
+   getSingleDev(id){
+    const singleData =  this.developers.find(dev => dev.id === parseInt(id))
+
+
+    return{
+        message : true,
+        data : singleData
+    }
+
+   }
+
+
 
 }
