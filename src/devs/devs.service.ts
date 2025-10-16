@@ -162,4 +162,16 @@ export class DevsService {
 
 
 
+
+// Create new developer data
+   createDev(dev){
+    this.developers.push(dev)
+    return{
+        success: true,
+      message: 'User created successfully',
+      data: dev,
+    }
+   }
+
+
 }

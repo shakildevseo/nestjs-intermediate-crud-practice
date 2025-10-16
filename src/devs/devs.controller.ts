@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, } from '@nestjs/common';
 import {DevsService} from "./devs.service"
 
 @Controller('devs')
@@ -19,5 +19,11 @@ export class DevsController {
     return this.devService.getSingleDev(id)
    }
 
+   
 
+
+@Post()
+createDev(@Body() dev){
+    return this.devService.createDev(dev)
+}
 }
